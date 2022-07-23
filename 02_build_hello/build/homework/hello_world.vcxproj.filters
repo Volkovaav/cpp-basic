@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\trolo\Desktop\си\cpp-basic\cpp-basic\02_build_hello\homework\hello_world.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\trolo\Desktop\си\cpp-basic\cpp-basic\02_build_hello\homework\example.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\trolo\Desktop\си\cpp-basic\cpp-basic\02_build_hello\homework\move_me_out.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\trolo\Desktop\си\cpp-basic\cpp-basic\02_build_hello\homework\move_me_out.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\trolo\Desktop\си\cpp-basic\cpp-basic\02_build_hello\homework\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{E96ED3C1-8A58-3BF8-A8A1-3A1AD9057F91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{93139A50-EF5E-3F2E-82DE-6A2963CD1A2A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

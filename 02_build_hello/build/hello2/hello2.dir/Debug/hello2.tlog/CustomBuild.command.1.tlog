@@ -1,0 +1,10 @@
+^C:\USERS\TROLO\DESKTOP\СИ\CPP-BASIC\CPP-BASIC\02_BUILD_HELLO\HELLO2\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/trolo/Desktop/си/cpp-basic/cpp-basic/02_build_hello -BC:/Users/trolo/Desktop/си/cpp-basic/cpp-basic/02_build_hello/build --check-stamp-file C:/Users/trolo/Desktop/си/cpp-basic/cpp-basic/02_build_hello/build/hello2/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

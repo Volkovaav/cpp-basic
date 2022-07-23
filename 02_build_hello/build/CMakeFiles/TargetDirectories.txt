@@ -1,0 +1,8 @@
+C:/Users/trolo/Desktop/си/cpp-basic/cpp-basic/02_build_hello/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/trolo/Desktop/си/cpp-basic/cpp-basic/02_build_hello/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/trolo/Desktop/си/cpp-basic/cpp-basic/02_build_hello/build/hello/CMakeFiles/hello.dir
+C:/Users/trolo/Desktop/си/cpp-basic/cpp-basic/02_build_hello/build/hello/CMakeFiles/ALL_BUILD.dir
+C:/Users/trolo/Desktop/си/cpp-basic/cpp-basic/02_build_hello/build/hello2/CMakeFiles/hello2.dir
+C:/Users/trolo/Desktop/си/cpp-basic/cpp-basic/02_build_hello/build/hello2/CMakeFiles/ALL_BUILD.dir
+C:/Users/trolo/Desktop/си/cpp-basic/cpp-basic/02_build_hello/build/homework/CMakeFiles/hello_world.dir
+C:/Users/trolo/Desktop/си/cpp-basic/cpp-basic/02_build_hello/build/homework/CMakeFiles/ALL_BUILD.dir
