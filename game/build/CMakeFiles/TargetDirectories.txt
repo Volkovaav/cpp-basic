@@ -1,0 +1,3 @@
+C:/Users/trolo/Desktop/си/gamecopycopy/build/CMakeFiles/game.dir
+C:/Users/trolo/Desktop/си/gamecopycopy/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/trolo/Desktop/си/gamecopycopy/build/CMakeFiles/ZERO_CHECK.dir
