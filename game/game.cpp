@@ -1,5 +1,7 @@
 #include "game.h"
+#include "high_score.h"
 #include <iostream>
+
 
 int gam(int a){
     std::string name;
@@ -22,5 +24,6 @@ int gam(int a){
         i++;
     } 
     std::cout<<"Good! Result: "<< i <<std::endl;
+    res();
     return i;
 }

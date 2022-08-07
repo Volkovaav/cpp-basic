@@ -2,6 +2,7 @@
 #include "high_score.h"
 #include <iostream>
 #include <cstdlib>
+
 int main(int argc, char* argv[]){
     int max;
     if (argc==1){ gam(100);}
