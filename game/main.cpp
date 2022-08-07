@@ -11,11 +11,11 @@ int main(int argc, char* argv[]){
             if((!strcmp(argv[i], "-max"))&&(i+1<argc)){
                 max = std::atoi(argv[i+1]);
                 gam(max);
+
             }
             if(!strcmp(argv[i], "-table")){
                 res();
             }
-            
         }
     }
     return 0;
