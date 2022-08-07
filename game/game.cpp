@@ -24,6 +24,7 @@ int gam(int a){
         i++;
     } 
     std::cout<<"Good! Result: "<< i <<std::endl;
+    score(name, i);
     res();
     return i;
 }

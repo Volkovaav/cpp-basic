@@ -1,10 +1,3 @@
-A 8
-b 1
-Sasha 6
-Sasha 2
-Sasha 3
-Sasha 4
-unu 1
-unu 7
-unu 3
-Sasha 4
+sasha 5
+4 4
+sasha 3
