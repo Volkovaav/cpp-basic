@@ -11,7 +11,7 @@ class SerialContainer{
         }
 
         T operator[] (size_t val){
-            return  m_temp[val];
+            return  &m_temp[val];
         }
 
         void reserve(size_t val){
