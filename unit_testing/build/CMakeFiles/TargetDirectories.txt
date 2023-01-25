@@ -1,0 +1,4 @@
+E:/Repositories/cpp-basic/unit_testing/build/CMakeFiles/demo.dir
+E:/Repositories/cpp-basic/unit_testing/build/CMakeFiles/test_list.dir
+E:/Repositories/cpp-basic/unit_testing/build/CMakeFiles/ALL_BUILD.dir
+E:/Repositories/cpp-basic/unit_testing/build/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,63 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: E:/Repositories/cpp-basic/unit_testing/build/CMakeFiles/CMakeScratch/TryCompile-uhs1yu
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe cmTC_5168b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine версии 16.11.2+f32259642 для .NET Framework
+(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.29.30147 для x64
+  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+  src.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5168b.dir\Debug\\" /Fd"cmTC_5168b.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "E:\Repositories\cpp-basic\unit_testing\build\CMakeFiles\CMakeScratch\TryCompile-uhs1yu\src.c"
+E:\Repositories\cpp-basic\unit_testing\build\CMakeFiles\CMakeScratch\TryCompile-uhs1yu\src.c(1,10): fatal error C1083: Не удается открыть файл включение: pthread.h: No such file or directory, [E:\Repositories\cpp-basic\unit_testing\build\CMakeFiles\CMakeScratch\TryCompile-uhs1yu\cmTC_5168b.vcxproj]
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: E:/Repositories/cpp-basic/unit_testing/build/CMakeFiles/CMakeScratch/TryCompile-mtl8st
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe cmTC_06f17.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine версии 16.11.2+f32259642 для .NET Framework
+(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.29.30147 для x64
+  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_06f17.dir\Debug\\" /Fd"cmTC_06f17.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "E:\Repositories\cpp-basic\unit_testing\build\CMakeFiles\CMakeScratch\TryCompile-mtl8st\CheckFunctionExists.c"
+LINK : fatal error LNK1104: не удается открыть файл "pthreads.lib" [E:\Repositories\cpp-basic\unit_testing\build\CMakeFiles\CMakeScratch\TryCompile-mtl8st\cmTC_06f17.vcxproj]
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: E:/Repositories/cpp-basic/unit_testing/build/CMakeFiles/CMakeScratch/TryCompile-tt1w5z
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe cmTC_2a76c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine версии 16.11.2+f32259642 для .NET Framework
+(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.29.30147 для x64
+  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+  CheckFunctionExists.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2a76c.dir\Debug\\" /Fd"cmTC_2a76c.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "E:\Repositories\cpp-basic\unit_testing\build\CMakeFiles\CMakeScratch\TryCompile-tt1w5z\CheckFunctionExists.c"
+LINK : fatal error LNK1104: не удается открыть файл "pthread.lib" [E:\Repositories\cpp-basic\unit_testing\build\CMakeFiles\CMakeScratch\TryCompile-tt1w5z\cmTC_2a76c.vcxproj]
+
+
+
