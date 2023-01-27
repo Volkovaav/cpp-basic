@@ -38,10 +38,7 @@ class ListContainer {
         }
         
         bool empty(){
-            if (m_first == nullptr){
-                return true;
-            }
-            return false;
+            return m_first == nullptr?true:false;
         }
 
         void push_back(T val){

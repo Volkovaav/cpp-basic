@@ -18,6 +18,7 @@ TEST (List, PushBack){
     listcont.push_back(0);
 
     ASSERT_EQ(listcont.size(), 1);
+    ASSERT_FALSE(listcont.empty());
 }
 
 TEST (List, insert_begginning){
@@ -41,21 +42,24 @@ TEST (List, insert){
     for(int i = 0; i<count; i++){
         listcont.push_back(i);
     }
+    int position = 5;
+    int value = 42;
+    int value_after = listcont[position];
 
     listcont.insert(0, 42);
     
     ASSERT_EQ(listcont.size(), count+1);
-    ASSERT_EQ(listcont[0], 42);
+    ASSERT_EQ(listcont[position], value);
+    ASSERT_EQ(listcont[position+1], value_after);
 }
 
-TEST (List, erase){
+TEST (List, erase_end){
     ListContainer<int> listcont;
     const int count = 10;
-
     for(int i = 0; i<count; i++){
         listcont.push_back(i);
     }
-    int list6 = listcont[6];
+    
     listcont.erase(5);
 
     ASSERT_EQ(listcont.size(), count-1);
