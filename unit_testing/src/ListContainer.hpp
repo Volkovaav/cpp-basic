@@ -80,14 +80,30 @@ class ListContainer {
             m_size++;
         }
 
+        void pop_back(){
+            Node<T>* temp = m_last;
+            m_last = m_last->m_prev;
+            delete temp;
+            m_size--;
+        }
+
         void erase(size_t position){
             Node<T>* temp = m_first;
-            for (size_t i= 0; i<position-1; i++){
-                    temp = temp->m_next;
-            }
-            temp->m_next = temp->m_next->m_next;
-            temp->m_next->m_prev = temp;
             m_size--;
+            switch (position){
+                case 0:
+                    m_first = m_first->m_next;
+                    m_first->m_prev = nullptr;
+                    break;
+                default:
+                    for (size_t i= 0; i<position-1; i++){
+                            temp = temp->m_next;
+                    }
+                    temp->m_next = temp->m_next->m_next;
+                    temp->m_next->m_prev = temp;
+                    break;
+            }
+            
         }
 
         size_t size(){
