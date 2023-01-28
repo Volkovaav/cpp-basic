@@ -1,6 +1,5 @@
-#include "ListContainer.hpp"
+#include "ListCont.hpp"
 #include <gtest/gtest.h>
-
 
 TEST (List, empty){
     // ARRANGE
@@ -122,4 +121,15 @@ TEST(List, erase){
     ASSERT_EQ(listcont.size(), count-1);
     ASSERT_EQ(listcont[position-1], value_m1);
     ASSERT_EQ(listcont[position], value_p1);
+}
+
+TEST(List, init_string){
+    ListContainer<char> listcont;
+
+    listcont.push_back('a');
+    listcont.push_back('b');
+    listcont.push_back('c');
+    
+    ASSERT_EQ(listcont.size(), 3);
+    ASSERT_EQ(listcont[0],'a');
 }
