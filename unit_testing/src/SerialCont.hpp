@@ -10,8 +10,12 @@ class SerialContainer{
             m_temp = nullptr;
         }
 
+        bool empty(){
+            return m_size==0?true:false;
+        }
+
         T operator[] (size_t val){
-            return  &m_temp[val];
+            return  m_temp[val];
         }
 
         void reserve(size_t val){
@@ -28,6 +32,11 @@ class SerialContainer{
             }
             m_temp[m_size++] = val;
 
+        }
+        void pop_back(){
+            // m_temp[m_size]=nullptr;
+            m_size--;
+            
         }
 
         size_t size(){
@@ -48,7 +57,11 @@ class SerialContainer{
                 reserve(m_capacity);
             }
             
+            // std::cout<<pos<<std::endl;
+            
             for (size_t i = m_size; i>pos; i--){
+                std::cout<<i<<m_temp[i]<<std::endl;
+                // std::cout<<i+1<<m_temp[i+1]<<std::endl;
                 m_temp[i] = m_temp[i-1];
             }
             m_temp[pos] = val;

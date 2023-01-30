@@ -13,24 +13,24 @@ add_executable(
 
 # Test target
 add_executable(
-    test_list
-    test/test_list.cpp
+    test
+    test/test_main.cpp
 )
 
 # Add src to the include directories for the test target
 target_include_directories(
-    test_list PRIVATE
+    test PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/src"
 )
 # Add googletest to the include directories for the test target
 target_include_directories(
-    test_list PRIVATE
+    test PRIVATE
     ${GTEST_INCLUDE_DIRS}
 )
 
 # Link test target against gtest libraries
 target_link_libraries(
-    test_list PRIVATE
+    test PRIVATE
     ${GTEST_BOTH_LIBRARIES}
 )
 
@@ -40,7 +40,7 @@ if (MSVC)
         /W4
     )
     target_compile_options(
-        test_list PRIVATE
+        test PRIVATE
         /W4
     )
 else ()
@@ -49,7 +49,7 @@ else ()
         -Wall -Wextra -pedantic -Werror
     )
     target_compile_options(
-        test_list PRIVATE
+        test PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
 endif()
