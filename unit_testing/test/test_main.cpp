@@ -1,5 +1,3 @@
-
-
 #include "test_list.hpp"
 #include "test_serial.hpp"
 

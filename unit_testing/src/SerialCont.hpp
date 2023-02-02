@@ -14,8 +14,12 @@ class SerialContainer{
             return m_size==0?true:false;
         }
 
-        T operator[] (size_t val){
-            return  m_temp[val];
+        const T& operator[] (size_t val){
+            if (empty()){
+                std::cout<<"error: container is empty"<<std::endl;
+                exit(1);
+            }
+            else return m_temp[val];
         }
 
         void reserve(size_t val){
@@ -52,20 +56,15 @@ class SerialContainer{
 
         void insert(size_t pos, const T& val){
             m_size++;
-            if (m_size>=m_capacity){
-                m_capacity=+1;
+            if(m_size>= m_capacity){
+                m_capacity+=1;
                 reserve(m_capacity);
             }
-            
-            // std::cout<<pos<<std::endl;
-            
             for (size_t i = m_size; i>pos; i--){
-                std::cout<<i<<m_temp[i]<<std::endl;
-                // std::cout<<i+1<<m_temp[i+1]<<std::endl;
                 m_temp[i] = m_temp[i-1];
             }
             m_temp[pos] = val;
-
+            
         }
 
         void print(){
