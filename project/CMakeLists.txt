@@ -1,6 +1,7 @@
-cmake_minimum_required(VERSION 2.8) # Проверка версии CMake.
-									# Если версия установленой программы
-									# старее указаной, произайдёт аварийный выход.
+cmake_minimum_required(VERSION 3.8)
 
-add_executable(test src/main.cpp)		# Создает исполняемый файл с именем main
-									# из исходника main.cpp
+project(test CXX)
+
+add_executable(test src/main.cpp)	
+
+target_compile_features(test PRIVATE cxx_std_17)
