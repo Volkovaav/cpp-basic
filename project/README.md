@@ -10,9 +10,9 @@
 
 Для сборки программы выполнить команды:
 
-cmake -B build
-
-cmake --build build
+>cmake -B build
+>
+>cmake --build build
 
 Проект выполнен для курса Otus C++ Basic
 
