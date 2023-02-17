@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+
+#include <cstdlib>
 using namespace std;
 
 
@@ -15,27 +17,45 @@ class human: public player{
     human (string n): name{n} {}
     
     int step() const override{
-    while (true) // Цикл, пока пользователь не введет допустимые данные
-        {
-            cout << "Enter a double value: ";
-            int x{};
+        while (true) {
+            cout <<name<< "`s movie. ";
+            string x;
             std::cin >> x;
-    
-            // Проверяем на неудачное извлечение
-            if (std::cin.fail()) // предыдущее извлечение не удалось?
-            {
-                // да, давайте разберемся с ошибкой
-                std::cin.clear(); // возвращаем нас в "нормальный" режим работы
-                
-                std::cout << "Oops, that input is invalid.  Please try again.\n";
+            int number=-1;
+            try{
+                number = stoi(x);
             }
-            else
-            {
-                return x;
+            catch(const std::exception& e){
+                std::cerr << e.what() << '\n';
             }
+            if (number>=0&&number<9){
+                return number;
+            }
+            else{
+                cout<<"Try again!"<<endl;
+            }
+            
         }
     }
     virtual ~human()= default;
+    virtual string getname() const override{
+        return name;
+    }
+
+    private:
+    string name;
+    
+};
+
+class computer: public player{
+    public:
+    computer (): name{"bob"} {}
+    
+    int step() const override{
+        int number = rand()%8;
+        return number;
+    }
+    virtual ~computer()= default;
     virtual string getname() const override{
         return name;
     }
@@ -110,15 +130,19 @@ class new_game{
         int count = start;
         print_field();
         while(!winner(ind[0])&&!winner(ind[1])&&!draw()){
-
             int point = pl[count]->step();
-            
-            field[point] = ind[count];
+            if (field[point]=='-'){
+                field[point] = ind[count];
+            }
+            else{
+                movie(pl, count);
+                return 0;
+            }
             print_field();
             count = (count+1)%2;
             
         }
-        if (winner(ind[0])||winner(ind[1])) cout<<pl[count]->getname()<<" won!"<<std::endl;
+        if (winner(ind[0])||winner(ind[1])) cout<<pl[(count+1)%2]->getname()<<" won!"<<std::endl;
         else if (draw()) cout<<"Draw!"<<std::endl;
         return 0;
     }
@@ -140,6 +164,20 @@ class new_game{
         movie(pl, 0);
     }
 
+    void with_computer(){
+        std::string naming;
+
+        std::cout<<"Enter player`s name"<<std::endl;
+        std::cin>>naming;
+
+
+        player* pl[2];
+        pl[0] = new human{naming};
+        pl[1] = new computer{};
+
+        movie(pl, 0);
+    }
+
     
     void start_game(){
         int point;
@@ -147,24 +185,24 @@ class new_game{
         cout<<"Hello!"<<endl;
         cout<<"1. Game with players"<<endl;
         cout<<"2. Game with computer"<<endl;
+        cout<<"3. Exit"<<endl;
         cin>>point;
 
         switch (point){
             case(1):{
                 with_player();
+                break;
+            }
+            case(2):{
+                with_computer();
+                break;
+            }
+            case(3):{
+                break;
             }
             default:{
                 break;
             }
         }
     }
-
-
-
 };
-
-
-
-
-
-
