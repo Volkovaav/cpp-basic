@@ -147,7 +147,6 @@ class new_game{
         return 0;
     }
 
-
     void with_player(){
         std::string naming[2];
 
@@ -177,7 +176,6 @@ class new_game{
 
         movie(pl, 0);
     }
-
     
     void start_game(){
         int point;
